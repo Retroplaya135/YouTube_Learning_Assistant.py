@@ -124,3 +124,10 @@ _create_exercises(): Designs programming exercises with sample solutions.
 Integration:
 Directly uses analysis insights and transcript excerpts to create educational content.
 
+## Installation & Execution ##
+
+Installation
+Dependencies:
+Ensure Python 3.8+ and FFmpeg are installed.
+Install Required Packages:
+
