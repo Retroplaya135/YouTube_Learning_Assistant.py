@@ -134,3 +134,8 @@ Install Required Packages:
 ```
 pip install yt-dlp openai anthropic assemblyai pydub rich
 ```
+
+```
+Execution
+Run the Script:
+```
