@@ -90,3 +90,9 @@ split_audio(file_path, segment_length):
 Segments long audio files into smaller chunks.
 Key Libraries: pydub, ffmpeg (via FFmpeg postprocessors in yt-dlp).
 
+Transcription & Video Analyzer Module (video_analyzer.py)
+Class: VideoAnalyzer
+
+Core Methods:
+analyze_content(): Executes parallel tasks (summary, key concepts, learning objectives, complexity analysis).
+_query_ai(prompt, task_type): Unified AI interface for model selection and fallback.
