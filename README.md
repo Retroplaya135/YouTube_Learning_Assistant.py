@@ -45,3 +45,18 @@ insights = await asyncio.gather(
     self._assess_complexity()
 )
 ```
+
+Multi-Model AI Integration
+
+Transcription Engines:
+Primary: AssemblyAI via aai.Transcriber()
+
+Fallback: OpenAI’s Whisper using openai.Audio.atranscribe()
+
+Content Analysis Models:
+Primary: Anthropic’s Claude 3 (via client.messages.create())
+
+Fallback: OpenAI’s GPT-4 Turbo (via openai.ChatCompletion.acreate())
+
+Unified AI Query Interface:
+Uses _query_ai(prompt, task_type) to wrap calls and dynamically route requests based on API key availability and error status.
