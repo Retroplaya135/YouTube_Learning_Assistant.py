@@ -63,6 +63,7 @@ Uses _query_ai(prompt, task_type) to wrap calls and dynamically route requests b
 
 
 #### High-Quality Audio Processing
+
 Audio Optimization:
 Converts audio to MP3 at 320k bitrate, 44100 Hz, mono-channel.
 Utilizes pydub.AudioSegment for sample rate conversion and channel mixing.
