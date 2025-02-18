@@ -131,3 +131,6 @@ Dependencies:
 Ensure Python 3.8+ and FFmpeg are installed.
 Install Required Packages:
 
+```
+pip install yt-dlp openai anthropic assemblyai pydub rich
+```
