@@ -46,7 +46,7 @@ insights = await asyncio.gather(
 )
 ```
 
-Multi-Model AI Integration
+#### Multi-Model AI Integration
 
 Transcription Engines:
 Primary: AssemblyAI via aai.Transcriber()
@@ -60,3 +60,9 @@ Fallback: OpenAI’s GPT-4 Turbo (via openai.ChatCompletion.acreate())
 
 Unified AI Query Interface:
 Uses _query_ai(prompt, task_type) to wrap calls and dynamically route requests based on API key availability and error status.
+
+
+#### High-Quality Audio Processing
+Audio Optimization:
+Converts audio to MP3 at 320k bitrate, 44100 Hz, mono-channel.
+Utilizes pydub.AudioSegment for sample rate conversion and channel mixing.
