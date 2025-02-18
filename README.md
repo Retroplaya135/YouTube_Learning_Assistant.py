@@ -10,3 +10,15 @@ The **YouTube Mastery Assistant** is a production-grade, asynchronous tool desig
 - [Core Modules & Code Architecture](#-core-modules--code-architecture-)
 - [Installation & Execution](#-installation--execution-)
 - [Configuration & API Management](#-configuration--api-management-)
+
+## ## Project Structure & File Layout ## ##
+```bash
+YouTube_Learning_Assistant.py/
+├── YouTube_Learning_Assistant.py  # Main script orchestrating the pipeline
+├── modules/
+│   ├── audio_processor.py  # Audio optimization & segmentation (using pydub)
+│   ├── video_analyzer.py   # Transcript analysis & dynamic AI routing
+│   └── content_generator.py# Learning material generation (study guides, quizzes, etc.)
+└── requirements.txt        # Required Python packages
+```
+
