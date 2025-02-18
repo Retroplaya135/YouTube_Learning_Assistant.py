@@ -22,3 +22,11 @@ YouTube_Learning_Assistant.py/
 └── requirements.txt        # Required Python packages
 ```
 
+## In-Depth Technical Details ##
+
+Asynchronous Concurrency
+Implementation:
+Uses Python’s asyncio to run I/O-bound tasks concurrently.
+Key Methods:
+asyncio.gather: Aggregates multiple AI queries.
+asyncio.run: Boots the main event loop.
