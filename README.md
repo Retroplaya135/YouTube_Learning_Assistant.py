@@ -74,3 +74,6 @@ audio = audio.set_frame_rate(CONFIG["AUDIO"]["sample_rate"])
 audio = audio.set_channels(1)
 audio.export(output_path, format=CONFIG["AUDIO"]["format"], bitrate=CONFIG["AUDIO"]["bitrate"])
 ```
+
+Dynamic AI Model Routing:
+If a primary AI call (e.g., Anthropic's Claude 3) fails, the script automatically routes to OpenAI’s GPT-4 Turbo.
