@@ -108,3 +108,19 @@ except Exception as e:
     console.print(f"[yellow]Fallback triggered: {e}[/]")
     return await self._query_openai(prompt, task_type)
 ```
+
+Asynchronous Execution:
+Ensures that AI calls do not block other operations using asyncio.gather.
+Learning Content Generator Module (content_generator.py)
+
+Class: LearningContentGenerator
+
+Core Methods:
+_create_study_guide(): Generates detailed Markdown guides.
+_generate_quiz(): Produces adaptive quizzes in JSON format.
+_create_flashcards(): Outputs Anki-compatible flashcards.
+_create_exercises(): Designs programming exercises with sample solutions.
+
+Integration:
+Directly uses analysis insights and transcript excerpts to create educational content.
+
