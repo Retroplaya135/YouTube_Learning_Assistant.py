@@ -34,3 +34,14 @@ Key Methods:
 
 asyncio.gather: Aggregates multiple AI queries.
 asyncio.run: Boots the main event loop.
+
+Example:
+
+```python
+insights = await asyncio.gather(
+    self._generate_summary(),
+    self._extract_key_concepts(),
+    self._identify_learning_objectives(),
+    self._assess_complexity()
+)
+```
