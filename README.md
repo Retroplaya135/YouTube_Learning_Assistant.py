@@ -96,3 +96,15 @@ Class: VideoAnalyzer
 Core Methods:
 analyze_content(): Executes parallel tasks (summary, key concepts, learning objectives, complexity analysis).
 _query_ai(prompt, task_type): Unified AI interface for model selection and fallback.
+
+
+Dynamic Routing:
+```python
+try:
+    if API_KEYS["ANTHROPIC_API_KEY"]:
+        return await self._query_claude(prompt, task_type)
+    return await self._query_openai(prompt, task_type)
+except Exception as e:
+    console.print(f"[yellow]Fallback triggered: {e}[/]")
+    return await self._query_openai(prompt, task_type)
+```
