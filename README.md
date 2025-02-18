@@ -77,3 +77,16 @@ audio.export(output_path, format=CONFIG["AUDIO"]["format"], bitrate=CONFIG["AUDI
 
 Dynamic AI Model Routing:
 If a primary AI call (e.g., Anthropic's Claude 3) fails, the script automatically routes to OpenAI’s GPT-4 Turbo.
+
+## Core Modules & Code Architecture ##
+
+Audio Module (audio_processor.py)
+
+Functions:
+optimize_audio(input_path, output_path):
+Optimizes audio with consistent parameters.
+
+split_audio(file_path, segment_length):
+Segments long audio files into smaller chunks.
+Key Libraries: pydub, ffmpeg (via FFmpeg postprocessors in yt-dlp).
+
