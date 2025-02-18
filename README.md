@@ -24,7 +24,7 @@ YouTube_Learning_Assistant.py/
 
 ## In-Depth Technical Details ##
 
-Asynchronous Concurrency
+#### Asynchronous Concurrency
 
 Implementation:
 
