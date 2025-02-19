@@ -81,15 +81,15 @@ If a primary AI call (e.g., Anthropic's Claude 3) fails, the script automaticall
 
 ## Core Modules & Code Architecture ##
 
-Audio Module (audio_processor.py)
+### 1. Audio Module (audio_processor.py)
 
-Functions:
-optimize_audio(input_path, output_path):
-Optimizes audio with consistent parameters.
+- **Implementation Details**:
 
-split_audio(file_path, segment_length):
-Segments long audio files into smaller chunks.
-Key Libraries: pydub, ffmpeg (via FFmpeg postprocessors in yt-dlp).
+  - Convert downloaded audio to a uniform format (MP3, 320k, 44100 Hz).
+  - Split the audio into fixed-length chunks (default 10 minutes).
+  - Uses [pydub](https://github.com/jiaaro/pydub) for file handling.
+  - Ensures consistent frame rate, mono channel, and bitrate.
+  - Allows for easy extension if additional audio processing steps (noise reduction, volume leveling) are required.
 
 Transcription & Video Analyzer Module (video_analyzer.py)
 Class: VideoAnalyzer
