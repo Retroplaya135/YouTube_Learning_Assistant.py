@@ -170,3 +170,10 @@ Results are output in Markdown or JSON based on the --format parameter.
 CONFIG Dictionary:
 Holds all critical settings (token limits, model IDs, audio settings).
 
+```
+CONFIG = {
+    "MAX_TOKENS": {"summary": 1000, "quiz": 1500, "outline": 2000, "analysis": 3000},
+    "MODELS": {"transcription": "whisper-1", "analysis": "claude-3-opus-20240229", "generation": "gpt-4-turbo-2024-04-09"},
+    "AUDIO": {"bitrate": "320k", "format": "mp3", "sample_rate": 44100}
+}
+```
