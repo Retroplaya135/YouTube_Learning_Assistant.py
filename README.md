@@ -25,16 +25,11 @@ YouTube_Learning_Assistant.py/
 
 ## In-Depth Technical Details ##
 
-#### Asynchronous Concurrency
+### Asynchronous Concurrency
 
 Implementation:
 
 Uses Python’s asyncio to run I/O-bound tasks concurrently.
-
-Key Methods:
-
-asyncio.gather: Aggregates multiple AI queries.
-asyncio.run: Boots the main event loop.
 
 Example:
 
@@ -47,7 +42,7 @@ insights = await asyncio.gather(
 )
 ```
 
-#### Multi-Model AI Integration
+### Multi-Model AI Integration
 
 Transcription Engines:
 Primary: AssemblyAI via aai.Transcriber()
@@ -63,7 +58,7 @@ Unified AI Query Interface:
 Uses _query_ai(prompt, task_type) to wrap calls and dynamically route requests based on API key availability and error status.
 
 
-#### High-Quality Audio Processing
+### High-Quality Audio Processing
 
 Audio Optimization:
 Converts audio to MP3 at 320k bitrate, 44100 Hz, mono-channel.
