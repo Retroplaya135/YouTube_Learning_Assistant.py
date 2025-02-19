@@ -210,3 +210,17 @@ API_KEYS = {
 }
 ```
 
+
+#### Error Handling and Logging
+
+Local Exception Blocks:
+
+Each stage (download, transcription, analysis, generation) has its own exception blocks to catch and handle errors specifically in that context.
+
+Fallback Mechanisms:
+--If Anthropic’s API call fails, the script switches to OpenAI GPT-4.
+--If AssemblyAI transcription fails, the script uses Whisper.
+
+Logging:
+--The script uses rich.console.Console to provide on-screen logs and formatted messages.
+--All warnings and errors are displayed in different colors to alert the user.
