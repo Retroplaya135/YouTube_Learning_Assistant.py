@@ -165,7 +165,27 @@ Produces study guides, quizzes, flashcards, and exercises.
 Output Formatting:
 Results are output in Markdown or JSON based on the --format parameter.
 
+## Concurrency and Workflow
 
+1. **Asynchronous Entry Point**  
+   - The `main` function is `async`, invoked via `asyncio.run(main(...))`.
+   - Each time an I/O-bound or network-bound task is requested, a separate coroutine is used.
+
+2. **Concurrent Analysis**  
+   - The analyzer runs four tasks (`_generate_summary`, `_extract_key_concepts`, `_identify_learning_objectives`, `_assess_complexity`) at the same time.
+   - This design reduces total wait time when multiple requests to AI models are needed.
+
+3. **Example Code Snippet**  
+   ```python
+   tasks = [
+       self._generate_summary(),
+       self._extract_key_concepts(),
+       self._identify_learning_objectives(),
+       self._assess_complexity()
+   ]
+   results = await asyncio.gather(*tasks)
+   ```
+   
 ## Configuration & API Management ##
 
 #### Centralized Configuration
