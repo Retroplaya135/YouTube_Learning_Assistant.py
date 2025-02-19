@@ -139,3 +139,16 @@ pip install yt-dlp openai anthropic assemblyai pydub rich
 Execution
 Run the Script:
 ```
+python yt_mastery.py "https://youtube.com/watch?v=YOUR_VIDEO_ID" --format markdown
+```
+
+Do not forget to change the URL to your video.
+
+Pipeline Flow:
+
+
+Download & Process Audio:
+Uses yt_dlp for video download and FFmpeg for audio extraction.
+
+Transcription:
+Calls AssemblyAI, with a fallback to Whisper.
