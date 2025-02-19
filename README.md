@@ -134,9 +134,8 @@ Install Required Packages:
 ```
 pip install yt-dlp openai anthropic assemblyai pydub rich
 ```
+#### Execution
 
-```
-Execution
 Run the Script:
 ```
 python yt_mastery.py "https://youtube.com/watch?v=YOUR_VIDEO_ID" --format markdown
@@ -162,3 +161,12 @@ Produces study guides, quizzes, flashcards, and exercises.
 
 Output Formatting:
 Results are output in Markdown or JSON based on the --format parameter.
+
+
+## Configuration & API Management ##
+
+#### Centralized Configuration
+
+CONFIG Dictionary:
+Holds all critical settings (token limits, model IDs, audio settings).
+
