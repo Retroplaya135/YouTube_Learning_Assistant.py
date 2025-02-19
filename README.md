@@ -3,7 +3,7 @@
 
 ## ## YouTube Mastery Assistant ## ##
 
-The **YouTube Mastery Assistant** is a production-grade, asynchronous tool designed to convert YouTube video content into structured, AI-powered educational materials. This repository is aimed at developers and engineers who need a highly technical solution with detailed error handling, multi-model integration, and robust audio processing.
+The **YouTube Mastery Assistant** is a asynchronous tool designed to convert YouTube video content into structured, AI-powered educational materials. This repository is aimed at developers and engineers who need a highly technical solution with detailed error handling, multi-model integration, and robust audio processing.
 
 ## ## Table of Contents ## ##
 - [Project Structure & File Layout](#-project-structure--file-layout-)
@@ -22,6 +22,19 @@ YouTube_Learning_Assistant.py/
 │   └── content_generator.py# Learning material generation (study guides, quizzes, etc.)
 └── requirements.txt        # Required Python packages
 ```
+
+## Introduction and Purpose
+
+This project automates the conversion of a YouTube video into educational materials. The system handles:
+
+- Audio extraction from a YouTube link
+- Audio normalization (bitrate, sample rate)
+- Transcription through multiple engines (primary + fallback)
+- Parallel analysis of the transcription
+- Generation of study guides, quizzes, and related resources
+
+The code is designed for maintainability, testing, and future expansion.
+
 
 ## In-Depth Technical Details ##
 
