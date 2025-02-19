@@ -314,6 +314,17 @@ API_KEYS = {
 }
 ```
 
+#### Configuration Strategy
+
+- **Centralized Settings:**  
+  The `CONFIG` dictionary holds all critical settings. This includes:
+  - **Token Limits:** Each AI task has an assigned maximum token count.
+  - **Model Identifiers:** Identifies which model to use for transcription, analysis, and content generation.
+  - **Audio Settings:** Defines the output format, bitrate, and sample rate for audio processing.
+
+- **Environment Variables:**  
+  API keys are read from the environment to prevent hardcoding sensitive data. This method also allows for easy integration into CI/CD pipelines.
+
 
 #### Error Handling and Logging
 
