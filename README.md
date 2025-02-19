@@ -35,6 +35,18 @@ This project automates the conversion of a YouTube video into educational materi
 
 The code is designed for maintainability, testing, and future expansion.
 
+## Overall Architecture
+
+The pipeline is broken down into these stages:
+
+1. **Download**: Retrieves the audio from a given YouTube link using `yt_dlp`.
+2. **Process Audio**: Normalizes and segments audio files using `pydub`.
+3. **Transcription**: Sends audio segments to AssemblyAI, with OpenAI’s Whisper as a fallback.
+4. **Analysis**: Runs parallel AI tasks (summary, key concepts, learning objectives, complexity rating) via Anthropic or OpenAI models.
+5. **Content Generation**: Creates learning materials (study guide, quiz, flashcards) based on the analysis.
+
+Each stage is built as a separate module or class, making it easier to swap out functionality or add new capabilities.
+
 
 ## In-Depth Technical Details ##
 
