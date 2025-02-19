@@ -117,6 +117,16 @@ except Exception as e:
     return await self._query_openai(prompt, task_type)
 ```
 
+### 3. `LearningContentGenerator`
+
+- **Purpose**:  
+  - Produces educational content (study guides, quizzes, flashcards, coding exercises) from the analyzer’s insights.
+  
+- **Implementation Details**:
+  - Reuses the `_query_ai` logic from `VideoAnalyzer` for content creation.
+  - Uses structured prompts adapted to each content type (e.g., multiple choice questions, code samples).
+
+---
 
 ## Installation & Execution ##
 
