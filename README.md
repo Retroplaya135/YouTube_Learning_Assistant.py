@@ -152,3 +152,13 @@ Uses yt_dlp for video download and FFmpeg for audio extraction.
 
 Transcription:
 Calls AssemblyAI, with a fallback to Whisper.
+
+
+Analysis:
+Executes multiple AI-powered analysis tasks concurrently.
+
+Content Generation:
+Produces study guides, quizzes, flashcards, and exercises.
+
+Output Formatting:
+Results are output in Markdown or JSON based on the --format parameter.
