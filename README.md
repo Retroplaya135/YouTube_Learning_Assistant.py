@@ -1,3 +1,4 @@
+
 # YouTube_Learning_Assistant.py
 
 ## ## YouTube Mastery Assistant ## ##
@@ -177,3 +178,18 @@ CONFIG = {
     "AUDIO": {"bitrate": "320k", "format": "mp3", "sample_rate": 44100}
 }
 ```
+
+API Key Handling
+
+#### Environment Variables:
+
+API keys are loaded at runtime from environment variables:
+
+```
+API_KEYS = {
+    "OPENAI_API_KEY": os.getenv("OPENAI_API_KEY"),
+    "ANTHROPIC_API_KEY": os.getenv("ANTHROPIC_API_KEY"),
+    "ASSEMBLYAI_API_KEY": os.getenv("ASSEMBLYAI_API_KEY")
+}
+```
+
