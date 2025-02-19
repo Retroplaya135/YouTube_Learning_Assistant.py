@@ -91,13 +91,20 @@ If a primary AI call (e.g., Anthropic's Claude 3) fails, the script automaticall
   - Ensures consistent frame rate, mono channel, and bitrate.
   - Allows for easy extension if additional audio processing steps (noise reduction, volume leveling) are required.
 
-Transcription & Video Analyzer Module (video_analyzer.py)
-Class: VideoAnalyzer
+### 2. `VideoAnalyzer`
 
-Core Methods:
-analyze_content(): Executes parallel tasks (summary, key concepts, learning objectives, complexity analysis).
-_query_ai(prompt, task_type): Unified AI interface for model selection and fallback.
-
+- **Purpose**:  
+  - Perform multiple analysis tasks on the transcript.
+  
+- **Key Methods**:
+  - `_generate_summary()`
+  - `_extract_key_concepts()`
+  - `_identify_learning_objectives()`
+  - `_assess_complexity()`
+  
+- **Implementation Details**:
+  - Uses asynchronous calls to AI models (Anthropic Claude 3 or OpenAI GPT-4).
+  - Gathers responses in parallel using `asyncio.gather`.
 
 Dynamic Routing:
 ```python
@@ -145,7 +152,6 @@ python yt_mastery.py "https://youtube.com/watch?v=YOUR_VIDEO_ID" --format markdo
 Do not forget to change the URL to your video.
 
 Pipeline Flow:
-
 
 Download & Process Audio:
 Uses yt_dlp for video download and FFmpeg for audio extraction.
