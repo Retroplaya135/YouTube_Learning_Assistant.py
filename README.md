@@ -341,12 +341,4 @@ Logging:
 --The script uses rich.console.Console to provide on-screen logs and formatted messages.
 --All warnings and errors are displayed in different colors to alert the user.
 
-#### Resource Management
 
-- **Temporary Storage:**  
-  The use of Python’s `tempfile.TemporaryDirectory` ensures that all intermediate files (e.g., downloaded audio files, temporary transcripts) are stored in a controlled, isolated environment and automatically cleaned up.
-  
-- **Segmented Processing:**  
-  By splitting long audio files into smaller chunks, the system avoids large memory spikes and makes error recovery more granular. If one segment fails to process, it is easier to retry or handle that specific segment without impacting the entire process.
-
----
