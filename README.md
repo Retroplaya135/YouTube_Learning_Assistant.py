@@ -23,6 +23,8 @@ YouTube_Learning_Assistant.py/
 └── requirements.txt        # Required Python packages
 ```
 
+
+
 ## Introduction and Purpose
 
 This project automates the conversion of a YouTube video into educational materials. The system handles:
@@ -47,6 +49,83 @@ The pipeline is broken down into these stages:
 
 Each stage is built as a separate module or class, making it easier to swap out functionality or add new capabilities.
 
+# Text-Based Diagrams
+
+Below are ASCII diagrams that illustrate the internal architecture and data flow of the YouTube Mastery Assistant.
+
+---
+
+## Pipeline Flow Diagram
+      +-------------------+
+      |   YouTube URL     |
+      +-------------------+
+               |
+               v
+      +-------------------+
+      |    yt_dlp        |  <-- Download video & extract audio
+      +-------------------+
+               |
+               v
+      +-------------------+
+      |   Raw Audio File  |
+      +-------------------+
+               |
+               v
+      +-----------------------------+
+      |       AudioProcessor        |  
+      |-----------------------------|
+      | - optimize_audio()          |  <-- Normalize (frame rate, channels, bitrate)
+      | - split_audio()             |  <-- Segment into chunks
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      | Processed Audio Segments    |
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      |       Transcription         |  
+      |-----------------------------|
+      | Primary: AssemblyAI         |  <-- Fast transcription
+      | Fallback: OpenAI Whisper    |  <-- For error recovery
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      |       Transcript            |
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      |       VideoAnalyzer         |
+      |-----------------------------|
+      | - _generate_summary()       |  
+      | - _extract_key_concepts()   |  
+      | - _identify_learning_objs() |  
+      | - _assess_complexity()      |  
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      |    Analysis Insights        |
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      | LearningContentGenerator    |
+      |-----------------------------|
+      | - _create_study_guide()     |  
+      | - _generate_quiz()          |  
+      | - _create_flashcards()      |  
+      | - _create_exercises()       |  
+      +-----------------------------+
+               |
+               v
+      +-----------------------------+
+      |   Formatted Output          |
+      | (Markdown / JSON Format)    |
+      +-----------------------------+
 
 ## In-Depth Technical Details ##
 
